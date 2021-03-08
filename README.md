@@ -35,13 +35,13 @@ https://advisor.climatempo.com.br/
 Rode o projeto
 
 ```
-yarn start
+yarn android
 ```
 
 ou
 
 ```
-npm start
+yarn ios
 ```
 
 ## Construído com
