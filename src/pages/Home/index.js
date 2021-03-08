@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { PermissionsAndroid, AppState } from 'react-native';
+import { PermissionsAndroid, Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/Ionicons'
 import Lottie from 'lottie-react-native';
 import Geolocation from 'react-native-geolocation-service';
@@ -66,7 +66,7 @@ const Home = ({ navigation }) => {
           (error) => {
 
           },
-          { enableHighAccuracy: false, timeout: 15000, maximumAge: 10000 }
+          { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
         );
 
       } else {
@@ -117,16 +117,17 @@ const Home = ({ navigation }) => {
 
   // Função para pegar o ID da cidade/região da localização
   async function getCityById(coordenates) {
-    await api.get(`/api/v1/locale/city?latitude=${coordenates.latitude}&longitude=${coordenates.longitude}&token=${TOKEN}`).then(
-      response => {
-        // Caso haja sucesso na requisição os id's são repassados nas funções
-        currentWeather(response.data.id);
-        setIdCity(response.data.id);
-      }
-    ).catch(function () {
-      // Se cair no catch, chamamos a função que está armazenando os últimos dados salvos
+
+    const response = await api.get(`/api/v1/locale/city?latitude=${coordenates.latitude}&longitude=${coordenates.longitude}&token=${TOKEN}`)
+
+    if (response.status !== 200) {
+      // Se a requisição não der certo, chamamos a função que está armazenando os últimos dados salvos
       getCurrentWeather();
-    })
+    }
+
+    // Caso haja sucesso na requisição os id's são repassados nas funções
+    currentWeather(response.data.id);
+    setIdCity(response.data.id);
   }
 
   // Função para trazer os dados do clima atual

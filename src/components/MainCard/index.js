@@ -72,7 +72,7 @@ const MainCard = ({ currentWeather }) => {
           <TextWeatherNumber>{item.temperature}Cº</TextWeatherNumber>
         </CardViewItem>
       </CardItem>
-      <Lottie resizeMode="cover" style={{ top: Platform.OS === 'android' ? -60 : -35, left: Platform.OS === 'android' ? 40 : 28 }} autoSize source={dictICons[item.icon]} autoPlay loop />
+      {item.icon ? <Lottie resizeMode="cover" style={{ top: Platform.OS === 'android' ? -60 : -35, left: Platform.OS === 'android' ? 40 : 28 }} autoSize source={dictICons[item.icon]} autoPlay loop /> : <></>}
     </Animated.View>
   );
 
