@@ -1,17 +1,17 @@
 
-# Go Barber Web
+# Bov Weather
 
 ![Preview-Screens](https://github.com/victorb132/BovWeather/blob/07ec1ad043524140a46ced4e3de9f6db36f539d3/github-asset/BovWeather.gif)
 
 
-Go Barber Web é uma app feito em ReactJS durante o Bootcamp da Rocketseat. Trata-se de um app que permite o agendamento de clientes com seus barbeiros/cabeleireiros. Essa aplicação web permite que os prestadores de serviço vejam suas agendas.
+Bov Weather é uma app feito em React Native afim de mostrar o clima do dia atual e dos próximos 7 dias com base na API do Clima tempo.
 
 ## Instalando e Executando
 
 Faça o clone do repositório
 
 ```
-git clone https://github.com/tavareshenrique/go-barber-web.git
+git clone https://github.com/victorb132/BovWeather.git
 ```
 
 Instale as dependências
@@ -26,10 +26,10 @@ ou
 npm install
 ```
 
-Rode o Back-End do GoBarber antes de executar o projeto
+Crie um arquivo chamado .env e utilize o modelo .env.example para usar as variaveis necessárias e pegue um token na api do Clima Tempo
 
 ```
-https://github.com/tavareshenrique/go-barber-backend
+https://advisor.climatempo.com.br/
 ```
 
 Rode o projeto
@@ -46,44 +46,28 @@ npm start
 
 ## Construído com
 
-- [ReactJS](https://pt-br.reactjs.org/)
+- [React Native](https://reactnative.dev/)
 - [React Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html)
-- [Rocketseat/Unform](https://github.com/Rocketseat/unform)
 - [Axios](https://github.com/axios/axios)
 - [date-fns](https://date-fns.org/)
-- [History](https://www.npmjs.com/package/history)
-- [Immer](https://github.com/immerjs/immer)
-- [Polished](https://github.com/styled-components/polished)
-- [Prop-Types](https://www.npmjs.com/package/prop-types)
-- [React Icons](https://react-icons.netlify.com/#/)
-- [React Perfect Scrollbar](https://www.npmjs.com/package/react-perfect-scrollbar)
-- [Redux](https://redux.js.org/)
-- [React Router DOM](https://reacttraining.com/react-router/web)
-- [React Toastify](https://github.com/fkhadra/react-toastify)
-- [Reactotron](https://github.com/infinitered/reactotron)
-- [Redux Persist](https://github.com/rt2zz/redux-persist)
+- [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+- [Async Storage](https://github.com/react-native-async-storage/async-storage)
 - [Styled Components](https://www.styled-components.com/)
-- [yup](https://github.com/jquense/yup)
-- [React App Rewired](https://github.com/timarney/react-app-rewired)
+- [Lottie React Native](https://github.com/lottie-react-native/lottie-react-native)
 
 ## Autor
 
 <table>
   <tr>
     <td align="center">
-      <a href="http://github.com/tavareshenrique/">
-        <img src="https://avatars1.githubusercontent.com/u/27022914?v=4" width="100px;" alt="Henrique Tavares"/>
+      <a href="https://github.com/victorb132">
+        <img src="https://avatars.githubusercontent.com/u/32309553?s=460&u=4318d12a1e7abe631fb93f41cb9b42281179c3e2&v=4" width="100px;" alt="Victor Novais"/>
         <br />
         <sub>
-          <b>Henrique Tavares</b>
+          <b>Victor Novais</b>
         </sub>
        </a>
        <br />
-       <a href="https://github.com/tavareshenrique/app-gobarber/commits?author=tavareshenrique" title="Code">@tavareshenrique</a>
     </td>
   </tr>
 </table>
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](https://github.com/tavareshenrique/go-barber-web/blob/master/LICENSE.md) para obter detalhes.
