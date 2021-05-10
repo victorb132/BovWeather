@@ -52,7 +52,7 @@ const Home = ({ navigation }) => {
       let granted = await PermissionsAndroid.request(
         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
         {
-          title: "Permissão Bov Change",
+          title: "Permissão Bov Weather",
           message: "Bov Weather precisa da sua localização para mostrar a temperatura da sua região.",
         }
       );
